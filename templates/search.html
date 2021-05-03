@@ -1,0 +1,18 @@
+<html>
+<form action="" method="POST">
+	<p> </p>
+	<p>Mobile Name<input type="text" value="{{mobname}}"name="mobname"/><p>
+		<p><input type="submit" value="submit"/></p>	
+		{% if mobname!=' '%}
+  <p>Code<input type="text" value="{{r}}"name="j"/><p>
+<p>Image<img src="/static/images/product-images/{{k}}" height=300 width=300><p>
+	<p>Categories<input type="text" value="{{s}}"name="category"/>
+	<p>Price<input type="text" value="{{r}}"name="price"/><p>
+<p>Discount<input type="text" value="{{t}}"name="Discount"/><p>
+
+{% else %}
+<p>no record found</p>
+{% endif %}
+	
+</form>
+</html>

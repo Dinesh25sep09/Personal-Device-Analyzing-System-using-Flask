@@ -1,0 +1,310 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pogo-slider.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.pogo-slider.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='slider-index.js') }}"></script>
+    <script src="{{ url_for('static', filename='smoothscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='form-validator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='contact-form-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='isotope.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='images-loded.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='custom.js') }}"></script>
+	</head>
+<body>
+    <div id="preloader">
+        <div class="loader">
+            <img src="{{ url_for('static', filename='loader.gif') }}" alt="#" />
+        </div>
+    </div>
+    <!-- end loader -->
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='foot1.png') }}" alt="image"></a><font color="blue"><b><big><big>PERSONAL DEVICES ANALYSING SYSTEM</big></big></big></b></font>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="/">Home</a></li>
+                        <li><a class="nav-link" href="/about">About</a></li>
+                        <li><a class="nav-link" href="/services">Services</a></li>
+                        <li><a class="nav-link" href="/signup2">Signup</a></li>
+						<li><a class="nav-link" href="/login">User Login</a></li>
+                        <li><a class="nav-link" href="/adminlogin">AdminLogin</a></li>
+						<li><a class="nav-link" href="/contact">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="search-box">
+                	
+
+               <input type="text" class="search-txt" placeholder="Search">
+                    <a class="search-btn">
+                       <img src="{{ url_for('static', filename='search_icon.png') }}" alt="#" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+ 
+    <!-- Start Banner -->
+    <div class="ulockd-home-slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pogoSlider" id="js-main-slider">
+                    <div class="pogoSlider-slide" style="background-image:url({{ url_for('static', filename='index.jpg') }});background-size:1500px 750px ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slide_text">
+                                        <h3><span span class="theme_color">A place to analyze</span><br>A chance to utilize</h3>
+                                        <h4>Personal Devices</h4>
+                                        <br>
+                                        <div class="full center">
+										    <a class="contact_bt" href="/login">Get Started</a>
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pogoSlider-slide" style="background-image:url({{ url_for('static', filename='index3.jpg') }});background-size:1500px 750px">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slide_text">
+                                        <h3><span span class="theme_color">A place to Analyze</span><br>A chance to utilize</h3>
+                                        <h4>Personal Devices</h4>
+                                        <br>
+                                        <div class="full center">
+										    <a class="contact_bt" href="/login">Get Started</a>
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .pogoSlider -->
+            </div>
+        </div>
+    </div>
+    <!-- End Banner -->
+    <!-- section -->
+    
+    <div class="section margin-top_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+						   <h2><span>Welcome To</span> Personal Devices</h2>
+                        </div>
+						<div class="full">
+						  <p><b> As we are all know that, Today Technology plays vital role in our daily life from kids to elder person. We want to use all those technologies onlf if we had devices like Smart phone, Laptop, Tablet, Personal computer, Camera and so on. So we must analyse and buy the devices with respect to our budget, device info, Statistics. Through this Personal Devices Analyzing System, people get know all the information regarding to personal devices....</b></p>
+						</div>
+						<div class="full">
+						   <a class="hvr-radial-out button-theme" href="/about">About more</a>
+						</div>
+                    </div>
+                </div>
+				<div class="col-md-6">
+                    <div class="full">
+                        <img src="{{ url_for('static', filename='img2.png') }}" alt="#" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- end section -->
+	<!-- section -->
+       
+	<!-- end section -->
+	<!-- section -->
+
+ <div class="section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="heading_main text_align_center">
+						   <h2><span>Personal </span>Devices</h2>
+                        </div>
+					  </div>
+                </div>
+				<div class="col-md-4">
+                    <div class="full blog_img_popular">
+                       <img class="img-responsive" src="{{ url_for('static', filename='mobile.jpg') }}" alt="#" height="380" width="300" /> 
+					   <h4>Smartphone</h4>
+                    </div>
+                </div>
+				<div class="col-md-4">
+                    <div class="full blog_img_popular">
+                        <img class="img-responsive" src="{{ url_for('static', filename='lap.jpg') }}" height="380" width="300"  />
+						<h4>Laptop</h4>
+                    </div>
+                </div>
+				<div class="col-md-4">
+                    <div class="full blog_img_popular">
+                        <img class="img-responsive" src="{{ url_for('static', filename='camera.png') }}" height="380" width="300"   />
+						<h4>Camera</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <div class="section margin-top_50 silver_bg">
+        <div class="container">
+            <div class="row">
+			    <div class="col-md-6">
+                    <div class="full float-right_img">
+                        <img src="{{ url_for('static', filename='img6.png') }}" alt="#" />
+                    </div>
+                </div>
+                <div class="col-md-6 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+						   <h2><span>Laptop</h2>
+                        </div>
+						<div class="full">
+						  <p><b>A laptop computer is a personal computer for mobile use. A laptop has most of the same components as a desktop computer, including a display, a keyboard, a pointing device such as a touchpad (also known as a trackpad) and/or a pointing stick, and speakers into a single unit. A laptop is powered by mains electricity via an AC adapter, and can be used away from an outlet using a rechargeable battery. Laptops are also sometimes called notebook computers, notebooks or netbooks.</b></p>
+						</div>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+	<!-- end section -->
+	<!-- section -->
+
+
+
+    <div class="section layout_padding padding_bottom-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+						   <h2><span>Camera</span></h2>
+                        </div>
+						<div class="full">
+						  <p>A camera is a device that takes pictures (photographs). A camera is an optical instrument used to record images. It uses film or electronics to make a picture of something. It is a tool of photography. A lens makes the image that the film or electronics. All cameras are basically a box that light can not get into until a photo is taken</p>
+						</div>
+						<div class="full">
+						   <a class="hvr-radial-out button-theme" href="/services">See More</a>
+						</div>
+                    </div>
+                </div>
+				<div class="col-md-6">
+                    <div class="full">
+                        <img class="img-responsive" src="{{ url_for('static', filename='cam.png') }}" alt="#"height="200" width="319" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- end section -->
+	<!-- section -->
+    <footer class="footer-box">
+        <div class="container">
+		
+		   <div class="row">
+		   
+		      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+			     <div class="footer_blog">
+				    <div class="full margin-bottom_30">
+					   <img src="{{ url_for('static', filename='dashboardlogo.png') }}" height="150"/>
+					 </div>
+					 <div class="full white_fonts">
+					    <p>The Main motive of this system is to Predict the personal devices through its properties. Once if we used this portal, the person will get clarity of this product and price. </p>
+					 </div>
+				 </div>
+			  </div>
+			  
+			  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+			       <div class="footer_blog footer_menu white_fonts">
+						    <h3>Quick links</h3>
+						    <ul> 
+							  <li><a href="/">> About</a></li>
+							  <li><a href="/services">> Our Services</a></li>
+							  <li><a href="/register">> Sign Up</a></li>
+							  <li><a href="/login">> Login</a></li>
+							  <li><a href="/contact">> Contact Us</a></li>
+							</ul>
+						 </div>
+				 </div>
+				 
+				 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				 <div class="footer_blog full white_fonts">
+						     <h3>Enquiry</h3>
+							 <p>If you have any queries regarding to our system.,</p>
+							 <div class="newsletter_form">
+							    <form action="">
+								   <input type="email" placeholder="Your Email" name="#" required />
+								   <button>Submit</button>
+								</form>
+							 </div>
+						 </div>
+					</div>	 
+			  
+			  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				 <div class="footer_blog full white_fonts">
+						     <h3>Contact us</h3>
+							 <ul class="full">
+							   <li><img src="{{ url_for('static', filename='i5.png') }}"><span>No. 120, 3rd Buliding, Vellore<br>India</span></li>
+							   <li><img src="{{ url_for('static', filename='i6.png') }}"><span>PersonalDeviceAnayzingSys@gmail.com</span></li>
+							   <li><img src="{{ url_for('static', filename='i7.png') }}"><span>+91-9080123456</span></li>
+							 </ul>
+						 </div>
+					</div>	 
+			  
+		   </div>
+		
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="crp">©2020 Personal Devices Analyzing System. All Copyrights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+        {% if error %}
+  <div class="alert alert-danger">{{error}}</div>
+{% endif %}
+        {% if msg %}
+  <div class="alert alert-success">{{msg}}</div>
+      {% endif %}
+</body>
+
+</html>
+	

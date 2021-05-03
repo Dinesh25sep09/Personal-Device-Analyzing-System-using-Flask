@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Side Navigation Bar</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+   <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+.css-button-rounded {
+
+    background: #2fc974;
+    color: #fff;
+    display: block;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 8px;
+}
+  </style>
+</head>
+<body style="background-color:skyblue">
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="/dashboard"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/mobile"><i class="fas fa-phone"></i>Smartphone</a></li>
+            <li><a href="/laptop"><i class="fas fa-address-card"></i>Laptop</a></li>
+            <li><a href="/tablet"><i class="fas fa-project-diagram"></i>Tablet</a></li>
+            <li><a href="/camera1"><i class="fas fa-blog"></i>Camera</a></li>
+            <li><a href="/viewspec"><i class="fas fa-address-book"></i>Specifications</a></li>
+             <li><a href="/viewarticle"><i class="fas fa-address-book"></i>View Articles</a></li>
+            <li><a href="/logout"><i class="fas fa-map-pin"></i>Logout</a></li>
+        </ul> 
+        <div class="social_media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="header">
+      <center>
+      <table>
+        <tr>
+          <td><img src="{{ url_for('static', filename='dashboardlogo.png') }}" alt="image"></td>
+            <td><font color="blue" ><center><h1 style="font-family:VAG Round;color:blue;font-size:40px">PERSONAL DEVICES ANALYSING SYSTEM</h1></b></font></center></td>
+            </tr>
+      </table>
+    </center>
+</td>
+</div>
+<div class="info">
+  <table>
+  <tr><td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    
+    <td><a class="css-button-rounded" href="/">Logout</a>
+  </tr>
+    </table>
+     <div class="alert alert-success">
+    {% if v %}
+  <h1>The Predicted Tablet price is:<i>{{ v }}</i>
+    </h1>
+    {% if v=="1" %}
+    <h1>The Price range must be Very Cheap</h1>
+    <h2><i>See the Tablet info within range</i>
+    <a href="/tabletspec">Click Here</h2></a>
+    {% endif %}
+
+    {% if v=="2" %}
+    <h1>The Price range must be Cheap</h1>
+    <h2><i>See the Tablet info within range</i>
+    <a href="/tabletspec">Click Here</h2></a>
+    {% endif %}
+
+    {% if v=="3" %}
+    <h1>The Price range must be Normal</h1>
+    <h2><i>See the Tablet info within range</i>
+    <a href="/tabletspec">Click Here</h2></a>
+    {% endif %}
+
+    {% if v=="4" %}
+    <h1>The Price range must be Expensive</h1>
+    <h2><i>See the Tablet info within range</i>
+    <a href="/tabletspec">Click Here</h2></a>
+    {% endif %}
+    </div>
+{% endif %}
+
+
+<table width="800">
+  <h2><font color="red">Tablet Price Classification</font></h2>
+<div class = "jumbotron text-center" style="background-image:url('{{ url_for('static', filename='tab_bg.jpg')}}');background-repeat:no-repeat; ">
+  
+  <form action="" method="POST" >
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Battery Power</label>
+      <center><input type="number" name="tablet1" class="form-control" style="width: 200px; color:black" placeholder="Eg. 1849" value={{request.form.username}} ></center>
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Bluetooth or Not</label>
+      <center><input type="number" name="tablet2" class="form-control" style="width: 200px;" placeholder="Eg.  1" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Microprocessor Speed</label>
+     <center> <input type="number" name="tablet3" class="form-control" style="width: 200px;" placeholder="Eg. 0.5" placeholder="Eg. 0 or 1"  step="0.1" min="0" max="10"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Double Line</label>
+     <center> <input type="number" name="tablet4" class="form-control" style="width: 200px;" placeholder="Eg. 0 or 1"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Front Camera Mp</label>
+     <center> <input type="number" name="tablet5" class="form-control" style="width: 200px;" placeholder="Eg. 1(Mega Pixels)"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">4G or Not</label>
+     <center> <input type="number" name="tablet6" class="form-control" style="width: 200px;" placeholder="Eg. 0 Or 1" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Internal Memory in Gigabytes</label>
+      <center><input type="number" name="tablet7" class="form-control" style="width: 200px;" placeholder="Eg. 29(GB)"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Thickness</label>
+     <center> <input type="number" name="tablet8" class="form-control" style="width: 200px;" placeholder="Eg. 0.5(cm)"  step="0.1" min="0" max="10"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Weight of Tablet</label>
+     <center> <input type="number" name="tablet9" class="form-control" style="width: 200px;" placeholder="Eg. 181" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Number of Cores of Processor</label>
+      <center><input type="number" name="tablet10" class="form-control" style="width: 200px;" placeholder="Eg. 7" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Rear Camera Mega pixels</label>
+      <center><input type="number" name="tablet11" class="form-control" style="width: 200px;" placeholder="Eg. 12( Mega Pixels)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Pixel Resolution Height</label>
+      <center><input type="number" name="tablet12" class="form-control" style="width: 200px;" placeholder="Eg. 978(px)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Pixel Resolution Width</label>
+     <center> <input type="number" name="tablet13" class="form-control" style="width: 200px;"placeholder="Eg. 1986(px)"  value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">RAM in Megabytes</label>
+     <center> <input type="number" name="tablet14" class="form-control" style="width: 200px;" placeholder="Eg. 3300(in MB)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Battery Shoulder</label>
+      <center><input type="number" name="tablet15" class="form-control" style="width: 200px;" placeholder="Eg. 15" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">3G or Not</label>
+      <center><input type="number" name="tablet16" class="form-control" style="width: 200px;" placeholder="Eg. 0 or 1" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Touch Screen or Not</label>
+     <center> <input type="number" name="tablet17" class="form-control" style="width: 200px;" placeholder="Eg. 0 or 1" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Wifi or Not</label>
+      <center><input type="number" name="tablet18" class="form-control" style="width: 200px;" placeholder="Eg. 0 or 1" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Color Of Tablet</label>
+      <center><select name="tablet19" style="width: 200px;height: 34px;">
+  <option value="1" width="50px">White</option>
+  <option value="2" width="50px">Pink</option>
+  <option value="3"width="50px">Purple</option>
+  <option value="4"width="50px">Orange</option>
+  <option value="5"width="50px">Gray</option>
+  <option value="6"width="50px">Yellow</option>
+  <option value="7"width="50px">Blue</option>
+  <option value="8"width="50px">Light Green</option>
+  <option value="9"width="50px">Brown</option>
+  <option value="10"width="50px">Green</option>
+  <option value="11"width="50px">Red</option>
+  <option value="12"width="50px">Black</option>
+  
+</select></center><div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+</div>
+</div>
+</div>
+
+
+      
+
+</body>
+</html>
+ 

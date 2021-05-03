@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css"> 
+      
+    
+    tr:nth-of-type(2n){ 
+        border: 1px solid black; 
+        background-color: rgba(150, 150, 150, 0.5); 
+  
+    } 
+  
+    
+</style>
+  <meta charset="UTF-8">
+  <title>Side Navigation Bar</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pogo-slider.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.pogo-slider.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='slider-index.js') }}"></script>
+    <script src="{{ url_for('static', filename='smoothscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='form-validator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='contact-form-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='isotope.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='images-loded.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='custom.js') }}"></script>
+   <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <style>
+.css-button-rounded {
+    background: #2fc974;
+    color: #fff;
+    display: block;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 8px;
+
+}
+  </style>
+</head>
+<body style="background-color:lightyellow" >
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="/adminhome"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/userinfo"><i class="fas fa-user"></i>View user Info</a></li>
+            <li><a href="/updateinfo"><i class="fas fa-address-card"></i>Search user Info</a></li>
+            <li><a href="/deleteinfo"><i class="fas fa-project-diagram"></i>Delete user Info</a></li>
+            <li><a href="/addarticle"><i class="fas fa-blog"></i>Post Article</a></li>
+            <li><a href="/viewmsg"><i class="fas fa-address-book"></i>View User Queries</a></li>
+            <li><a href="/logout"><i class="fas fa-map-pin"></i>Logout</a></li>
+        </ul> 
+        <div class="social_media">
+          <a><i class="fab fa-facebook-f"></i></a>
+          <a ><i class="fab fa-twitter"></i></a>
+          <a ><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+      
+  <div class="main_content">
+    <div class="header">
+      <center>
+      <table>
+        <tr>
+          <td><img src="{{ url_for('static', filename='dashboardlogo.png') }}" alt="image"></td>
+            <td><font color="blue" ><h1 style="font-family:VAG Round;color:blue;font-size:40px">PERSONAL DEVICES ANALYSING SYSTEM</h1></b></font></td>
+            </tr>
+      </table>
+    </center>
+</div>
+<div class="info">
+  <table>
+  <tr><td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    
+    <td><a class="css-button-rounded" href="/">Logout</a>
+  </tr>
+</table>
+<br>
+   {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+   
+        <h1 style="color:blue">&ensp;&ensp;&ensp;View User Info</h1>
+        <br>
+        <br>
+     
+<center>
+<table style="margin-left: 20px;">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>&ensp;&ensp;&ensp;&ensp;Email</th>
+        <th>Date Of Birth</th>
+        <th>Gender</th>
+        <th>Phone Number</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in r %} 
+            <tr>
+                <td style=" padding: 8px 8px; 
+        border: 1px solid black; ">{{row.id}}</td>
+                <td style=" padding: 8px 8px; 
+        border: 1px solid black; ">{{row.firstname}}</td>
+                <td style=" padding: 8px 8px; 
+        border: 1px solid black; ">{{row.lastname}}</td>
+                <td style=" padding: 8px 8px; 
+        border: 1px solid black; ">{{row.email}}</td>
+               
+                <td style=" padding: 8px 8px; 
+        border: 1px solid black; ">{{row.dob}}</td>
+                <td style=" padding: 8px 8px; 
+        border: 1px solid black; ">{{row.gender}}</td>
+                <td style=" padding: 8px 8px; 
+        border: 1px solid black; ">{{row.phone}}</td>
+            </tr>
+        {% endfor %}        
+    </tbody>
+</table>
+</center>
+     
+    </div>
+</div>
+    
+      

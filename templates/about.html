@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+      <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pogo-slider.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.pogo-slider.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='slider-index.js') }}"></script>
+    <script src="{{ url_for('static', filename='smoothscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='form-validator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='contact-form-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='isotope.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='images-loded.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='custom.js') }}"></script>
+
+
+</head>
+
+<body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="{{ url_for('static', filename='loader.gif') }}" alt="#" />
+        </div>
+    </div>
+    <!-- end loader -->
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='foot1.png') }}" alt="image"></a><font color="blue"><b><big><big>PERSONAL DEVICES ANALYSING SYSTEM</big></big></b></font>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="/">Home</a></li>
+                        <li><a class="nav-link" href="/about">About</a></li>
+                        <li><a class="nav-link" href="/signup2">Services</a></li>
+                        <li><a class="nav-link" href="/register">Signup</a></li>
+						<li><a class="nav-link" href="/login">Login</a></li>
+						<li><a class="nav-link" href="/contact">Contactus</a></li>
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="search-txt" placeholder="Search">
+                    <a class="search-btn">
+                        <img src="{{ url_for('static', filename='search_icon.png') }}" alt="#" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+
+	<!-- section -->
+	
+	<section class="inner_banner">
+	  <div class="container">
+	      <div class="row">
+		      <div class="col-12">
+			     <div class="full">
+				     <h3>About us</h3>
+				 </div>
+			  </div>
+		  </div>
+	  </div>
+	</section>
+	
+	<!-- end section -->
+   
+	<!-- section -->
+    <div class="section margin-top_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+						   <h2><span>About</span> Personal Devices</h2>
+                        </div>
+						<div class="full">
+						  <p><b>As we are all know that, Today Technology plays vital role in our daily life from kids to elder person. We want to use all those technologies onlf if we had devices like Smart phone, Laptop, Tablet, Personal computer, Camera and so on. So we must analyse and buy the devices with respect to our budget, device info, Statistics. Through this Personal Devices Analyzing System, people get know all the information regarding to personal devices.This System is full fledged analyzing the personal devices. The Main motive of this system is to Predict the personal devices through its properties. Once if we used this portal, the person will get clarity of this product and price.</b></p>
+						</div>
+                    </div>
+                </div>
+				<div class="col-md-6">
+                    <div class="full">
+                    	<br>
+                        <img src="{{ url_for('static', filename='img2.png') }}" alt="#" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- end section -->
+	<!-- section -->
+     <div class="section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="heading_main text_align_center">
+						   <h2><span>Personal </span>Devices</h2>
+                        </div>
+					  </div>
+                </div>
+				<div class="col-md-4">
+                    <div class="full blog_img_popular">
+                       <img class="img-responsive" src="{{ url_for('static', filename='mobile.jpg') }}" alt="#" height="380" width="300" /> 
+					   <h4>Smartphone</h4>
+                    </div>
+                </div>
+				<div class="col-md-4">
+                    <div class="full blog_img_popular">
+                        <img class="img-responsive" src="{{ url_for('static', filename='lap.jpg') }}" />
+						<h4>Laptop</h4>
+                    </div>
+                </div>
+				<div class="col-md-4">
+                    <div class="full blog_img_popular">
+                        <img class="img-responsive" src="{{ url_for('static', filename='camera.png') }}"  />
+						<h4>Camera</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- end section -->
+    <!-- Start Footer -->
+    
+
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="crp">©2020 Personal Devices Analyzing System. All Copyrights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

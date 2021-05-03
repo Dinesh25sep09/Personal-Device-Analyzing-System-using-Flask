@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pogo-slider.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.pogo-slider.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='slider-index.js') }}"></script>
+    <script src="{{ url_for('static', filename='smoothscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='form-validator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='contact-form-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='isotope.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='images-loded.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='custom.js') }}"></script>
+
+
+</head>
+
+<body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="{{ url_for('static', filename='loader.gif') }}" alt="#" />
+        </div>
+    </div>
+    <!-- end loader -->
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='foot1.png') }}" alt="image"></a><font color="blue"><b><big><big>PERSONAL DEVICES ANALYSING SYSTEM</big></big></b></font>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="/">Home</a></li>
+                        <li><a class="nav-link" href="/about">About</a></li>
+                        <li><a class="nav-link" href="/services">Services</a></li>
+                        <li><a class="nav-link" href="/register">Signup</a></li>
+						<li><a class="nav-link" href="/login">Login</a></li>
+						<li><a class="nav-link" href="/contact">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="search-txt" placeholder="Search">
+                    <a class="search-btn">
+                        <img src="{{ url_for('static', filename='search_icon.png') }}" alt="#" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+
+	<!-- section -->
+	
+	<section class="inner_banner">
+	  <div class="container">
+	      <div class="row">
+		      <div class="col-12">
+			     <div class="full">
+				     <h3>Any Queries</h3>
+				 </div>
+			  </div>
+		  </div>
+	  </div>
+	</section>
+	
+	<!-- end section -->
+   
+	<!-- section -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+    <div class="section layout_padding contact_section" style="background:#f6f6f6;">
+        <div class="container">
+               <div class="row">
+                 <div class="col-lg-8 col-md-8 col-sm-12">
+				    <div class="full float-right_img">
+                        <img src="{{ url_for('static', filename='img10.png') }}" alt="#">
+                    </div>
+                 </div>
+				 <div class="col-lg-4 col-md-4 col-sm-12">
+				    <div class="contact_form">
+					    <form action="" method="post">
+						   <fieldset>
+						       <div class="full field">
+							      <input type="text" placeholder="Your Name" name="name" />
+							   </div>
+							   <div class="full field"> 
+							      <input type="email" placeholder="Email Address" name="email" />
+							   </div>
+							   <div class="full field">
+							      <input type="phn" placeholder="Phone Number" name="phone" />
+							   </div>
+							   <div class="full field">
+							      <textarea placeholder="Message" name="msg"></textarea>
+							   </div>
+							   <div class="full field">
+							      <div class="center"><button>Send</button></div>
+							   </div>
+						   </fieldset>
+						</form>
+					</div>
+                 </div>
+               </div>			  
+           </div>
+        </div>
+</body>
+
+</html>

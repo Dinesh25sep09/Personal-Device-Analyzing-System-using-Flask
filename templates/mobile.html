@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+	 <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+	 <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+.css-button-rounded {
+
+    background: #2fc974;
+    color: #fff;
+    display: block;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 8px;
+}
+	</style>
+</head>
+<body style="background-color:skyblue">
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+        <li><a href="/dashboard"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/mobile"><i class="fas fa-phone"></i>Smartphone</a></li>
+            <li><a href="/laptop"><i class="fas fa-address-card"></i>Laptop</a></li>
+            <li><a href="/tablet"><i class="fas fa-project-diagram"></i>Tablet</a></li>
+            <li><a href="/camera1"><i class="fas fa-blog"></i>Camera</a></li>
+            <li><a href="/viewspec"><i class="fas fa-address-book"></i>Specifications</a></li>
+            <li><a href="/viewarticle"><i class="fas fa-address-book"></i>View Articles</a></li>
+            <li><a href="/logout"><i class="fas fa-map-pin"></i>Logout</a></li>
+        </ul> 
+        <div class="social_media">
+          <a ><i class="fab fa-facebook-f"></i></a>
+          <a ><i class="fab fa-twitter"></i></a>
+          <a><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+    	<div class="header">
+    	<center>
+    	<table>
+    		<tr>
+    			<td><img src="{{ url_for('static', filename='dashboardlogo.png') }}" alt="image"></td>
+    				<td><font color="blue" ><center><h1 style="font-family:VAG Round;color:blue;font-size:40px">PERSONAL DEVICES ANALYSING SYSTEM</h1></b></font></center></td>
+    				</tr>
+    	</table>
+    </center>
+</td>
+</div>
+<div class="info">
+	<table>
+	<tr><td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		
+		<td><a class="css-button-rounded" href="/">Logout</a>
+	</tr>
+    </table>
+     <div class="alert alert-success">
+    {% if v %}
+  <h1>Classified Mobile Price is:<i>{{ v }}</i>
+		</h1>
+		{% if v=="0" %}
+		<h1>The Price range must be Below 12000</h1>
+    <h2><i>See the Smartphone info within range</i>
+    <a href="/mobilespec">Click Here</h2></a>
+		{% endif %}
+
+		{% if v=="1" %}
+		<h1>The Price range must be 12000 to 25000</h1>
+    <h2><i>See the Smartphone info within range</i>
+    <a href="/mobilespec">Click Here</h2></a>
+		{% endif %}
+
+		{% if v=="2" %}
+		<h1>The Price range must be 25000 to 38000</h1>
+    <h2><i>See the Smartphone info within range</i>
+    <a href="/mobilespec">Click Here</h2></a>
+		{% endif %}
+
+		{% if v=="3" %}
+		<h1>The Price range must be Above 38000</h1>
+    <h2><i>See the Smartphone info within range</i>
+    <a href="/mobilespec">Click Here</h2></a>
+		{% endif %}
+    </div>
+{% endif %}
+
+
+<table width="800">
+	<h2><font color="red">Mobile Price Prediction</font></h2>
+<div class = "jumbotron text-center" style="background-image:url('{{ url_for('static', filename='bg_phone.jpg')}}');background-repeat:no-repeat; ">
+  
+  <form action="" method="POST" >
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Battery Power</label>
+      <center><input type="number" name="mobile1" class="form-control" style="width: 200px; color:black" placeholder="Eg. 1954" value={{request.form.username}} ></center>
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Bluetooth</label>
+      <center><input type="number" name="mobile2" class="form-control" style="width: 200px;" placeholder="Eg. 0 or 1" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Clock Speed</label>
+     <center> <input type="number" name="mobile3" class="form-control" style="width: 200px;" placeholder="Eg. 0.5" placeholder="Eg. 0 or 1"  step="0.1" min="0" max="10"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Dual Sim</label>
+     <center> <input type="number" name="mobile4" class="form-control" style="width: 200px;" placeholder="Eg. 0 or 1"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Front Camera Mega Pixels</label>
+     <center> <input type="number" name="mobile5" class="form-control" style="width: 200px;" placeholder="Eg. 5(Mega Pixels)"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">4G or Not</label>
+     <center> <input type="number" name="mobile6" class="form-control" style="width: 200px;" placeholder="Eg. 0 Or 1" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Internal Memory in Gigabytes</label>
+      <center><input type="number" name="mobile7" class="form-control" style="width: 200px;" placeholder="Eg. 24(GB)"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Mobile Depth in cm</label>
+     <center> <input type="number" name="mobile8" class="form-control" style="width: 200px;" placeholder="Eg. 0.8(cm)"  step="0.1" min="0" max="10"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Weight of Mobile Phone</label>
+     <center> <input type="number" name="mobile9" class="form-control" style="width: 200px;" placeholder="Eg. 187" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Number of Cores of Processor</label>
+      <center><input type="number" name="mobile10" class="form-control" style="width: 200px;" placeholder="Eg. 4" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Primary Camera Mega pixels</label>
+      <center><input type="number" name="mobile11" class="form-control" style="width: 200px;" placeholder="Eg. 3( Mega Pixels)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Pixel Resolution Height</label>
+      <center><input type="number" name="mobile12" class="form-control" style="width: 200px;" placeholder="Eg. 512(px)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Pixel Resolution Width</label>
+     <center> <input type="number" name="mobile13" class="form-control" style="width: 200px;"placeholder="Eg. 1149(px)"  value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">RAM in Megabytes</label>
+     <center> <input type="number" name="mobile14" class="form-control" style="width: 200px;" placeholder="Eg. 700(in MB)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Screenheight of Mobile in cm</label>
+      <center><input type="number" name="mobile15" class="form-control" style="width: 200px;" placeholder="Eg. 16(cm)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">ScreenWidth of Mobile in cm</label>
+      <center><input type="number" name="mobile16" class="form-control" style="width: 200px;" placeholder="Eg. 3(cm)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Talk time</label>
+     <center> <input type="number" name="mobile17" class="form-control" style="width: 200px;" placeholder="Eg. 5(hrs)" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">3G or Not</label>
+      <center><input type="number" name="mobile18" class="form-control" style="width: 200px;" placeholder="Eg. 0 or 1" value={{request.form.password}}>
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Touch Screen or Not</label>
+      <center><input type="number" name="mobile19" class="form-control" style="width: 200px;" placeholder="Eg. 0 or 1" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Wifi or Not</label>
+      <center><input type="number" name="mobile20" class="form-control" style="width: 200px;" placeholder="Eg. 0 0r 1" value={{request.form.username}} >
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+</div>
+</div>
+</div>
+
+
+			
+
+</body>
+</html>
+ 

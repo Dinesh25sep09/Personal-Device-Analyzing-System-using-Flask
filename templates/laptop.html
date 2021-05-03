@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Side Navigation Bar</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+   <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+.css-button-rounded {
+
+    background: #2fc974;
+    color: #fff;
+    display: block;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 8px;
+}
+  </style>
+</head>
+<body style="background-color:skyblue">
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+           <li><a href="/dashboard"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/mobile"><i class="fas fa-phone"></i>Smartphone</a></li>
+            <li><a href="/laptop"><i class="fas fa-address-card"></i>Laptop</a></li>
+            <li><a href="/tablet"><i class="fas fa-project-diagram"></i>Tablet</a></li>
+            <li><a href="/camera1"><i class="fas fa-blog"></i>Camera</a></li>
+            <li><a href="/viewspec"><i class="fas fa-address-book"></i>Specifications</a></li>
+             <li><a href="/viewarticle"><i class="fas fa-address-book"></i>View Articles</a></li>
+            <li><a href="/logout"><i class="fas fa-map-pin"></i>Logout</a></li>
+        </ul> 
+        <div class="social_media">
+          <a ><i class="fab fa-facebook-f"></i></a>
+          <a ><i class="fab fa-twitter"></i></a>
+          <a ><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="header">
+      <center>
+      <table>
+        <tr>
+          <td><img src="{{ url_for('static', filename='dashboardlogo.png') }}" alt="image"></td>
+            <td><font color="blue" ><center><h1 style="font-family:VAG Round;color:blue;font-size:40px">PERSONAL DEVICES ANALYSING SYSTEM</h1></b></font></center></td>
+            </tr>
+      </table>
+    </center>
+</td>
+</div>
+<div class="info">
+  <table>
+  <tr><td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    
+    <td><a class="css-button-rounded" href="/">Logout</a>
+  </tr>
+    </table>
+     <div class="alert alert-success">
+    {% if d!=null %}
+  <h1>Predicted Laptop price:<i>{{ d }}</i>
+<h2><i>See the Laptop info within range</i>
+    <a href="/laptopspec">Click Here</h2></a>
+</div>
+{% endif %}
+<table width="800">
+  <h2><font color="red">Laptop Price Prediction</font></h2>
+<div class = "jumbotron text-center" style="background-image:url('{{ url_for('static', filename='lapbg.jpg')}}');background-repeat:no-repeat; ">
+  
+  <form action="/laptop" method="POST" >
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Laptop Brand</label>
+      <center><select name="laptop1" style="width: 200px;height: 34px;">
+  <option value="1" width="50px">Dell</option>
+  <option value="2" width="50px">Hp</option>
+  <option value="3"width="50px">ASUS</option>
+  <option value="4"width="50px">Lenovo</option>
+</select></center><div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Intel Core</label>
+      <center><input type="number" name="laptop2" class="form-control" style="width: 200px;" placeholder="Eg. 7" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Intel Core Gen</label>
+     <center> <input type="number" name="laptop3" class="form-control" style="width: 200px;" placeholder="Eg. 9" placeholder="Eg. 0 or 1"  value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Processing Speed</label>
+     <center> <input type="number" name="laptop4" class="form-control" style="width: 200px;" placeholder="Eg. 2.6" step="0.1" min="0" max="10"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">RAM</label>
+     <center> <input type="number" name="laptop5" class="form-control" style="width: 200px;" placeholder="Eg. 8"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">HDD</label>
+     <center> <input type="number" name="laptop6" class="form-control" style="width: 200px;" placeholder="Eg. 1000"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">SSD</label>
+     <center> <input type="number" name="laptop7" class="form-control" style="width: 200px;" placeholder="Eg. 256" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Graphics </label>
+      <center><input type="number" name="laptop8" class="form-control" style="width: 200px;" placeholder="Eg. 4"value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label style="background-color:blue;color:white;border-radius: 6px;">Screen Size</label>
+     <center> <input type="number" name="laptop9" class="form-control" style="width: 200px;" placeholder="Eg. 15.6" step="0.1" min="0" max="100"value={{request.form.username}} >
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+</div>
+</div>
+</div>
+
+
+      
+
+</body>
+</html>
+ 

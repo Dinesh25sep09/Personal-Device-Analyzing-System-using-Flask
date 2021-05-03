@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+	 <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+	 <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+.css-button-rounded {
+
+    background: #2fc974;
+    color: #fff;
+    display: block;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 8px;
+}
+	</style>
+</head>
+<body style="background-color:pink">
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+             <li><a href="/dashboard"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/mobile"><i class="fas fa-user"></i>Smartphone</a></li>
+            <li><a href="/laptop"><i class="fas fa-address-card"></i>Laptop</a></li>
+            <li><a href="/tablet"><i class="fas fa-project-diagram"></i>Tablet</a></li>
+            <li><a href="/camera"><i class="fas fa-blog"></i>Camera</a></li>
+            <li><a href="/specification"><i class="fas fa-address-book"></i>Specifications</a></li>
+            <li><a href="/logout"><i class="fas fa-map-pin"></i>Logput</a></li>
+        </ul> 
+        <div class="social_media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+    	<div class="header">
+    	<center>
+    	<table>
+    		<tr>
+    			<td><img src="{{ url_for('static', filename='dashboardlogo.png') }}" alt="image"></td>
+    				<td><font color="blue" ><center><h1 style="font-family:VAG Round;color:blue;font-size:40px">PERSONAL DEVICES ANALYSING SYSTEM</h1></b></font></center></td>
+    				<td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    				<td><a class="css-button-rounded" href="/">Logout</a>
+    				</tr>
+    	</table>
+    </center>
+</td>
+</div>
+<table width="800">
+	<h2><font color="red">Mobile Price Prediction</font></h2>
+<div class = "jumbotron text-center">
+  
+  <form action="" method="POST" >
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} ></center>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <center><input type="password" name="password" class="form-control" style="width: 200px;" value={{request.form.password}}>
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+     <center> <input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <center><input type="text" name="username" class="form-control" style="width: 200px;" value={{request.form.username}} >
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+</div>
+		<h1>your mobile price:<i>{{ v }}</i></table>
+</body>
+</html>
+ 

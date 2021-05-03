@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Content-Style-Type" content="text/css">
+<title>Form</title>
+
+<style type="text/css">
+<!-- 
+form {width:26em}
+fieldset {padding:1ex}
+legend {font-size:150%; font-weight:bold}
+label {display:block; margin:1em 0}
+input {display:block; width:30ex}
+textarea {display:block; width:50ex; height:7em}
+button {display:block; margin:auto}
+-->
+</style>
+
+</head>
+<body>
+<form action="script.cgi">
+<fieldset>
+<legend>My Form</legend>
+<label>First Name:<input type="text" id="fname"></label>
+<label>Last Name:<input type="text" id="lname"></label>
+<label>E-mail:<input type="text" id="email"></label>
+<label>Subject:<input type="text" id="subject"></label>
+<label>Message:<textarea id="message"></textarea></label>
+<button type="submit">Submit</button>
+</fieldset>
+</form>
+</body>
+</html>
